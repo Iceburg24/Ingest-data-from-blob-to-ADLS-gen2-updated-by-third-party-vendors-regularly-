@@ -1,0 +1,9 @@
+{
+	"name": "df-drishti",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fb5041c5-1026-4e72-b333-44d0b4212d0f",
+		"tenantId": "63e50e9c-6362-4d22-9d1a-862203614c80"
+	}
+}
