@@ -1,18 +1,18 @@
 # Ingest-data-from-blob-to-ADLS-gen2-updated-by-third-party-vendors-regularly-
 Here we are Ingesting the data from Source(Blob Storage) updated by third party vendors regularly, transferring and loading the data to Sink(ADLS GEN2).Products.csv will be updated by third party vendors regularly. Currently in the blob storage and we need to bring the products dataset to Datalake.
 Steps to follow-
-1) Create dashboard 
-2) Create resource and resource group
-3) create blob storage acc
-4) Create ADLS Gen 2 acc --- Enable hierarchical namespace
-5) After creating both storage accounts - Select individual storage acc-> settings-> configurations->enable "allow blob anonymous access" for both storage accounts.
-6) create container in blob - "retail raw"-> upload "products.csv" (when you run the pipeline while debuging.
-create container in ADLS -> "retail datasets"-> create directory "raw"
-7) create Data factories
-8)Create linked service for blob and ADLS
-9) Create datasets for both
-10) Create pipeline
-11) "validation" added first
-12) "get metadata"
-13) if condition - copy data (true)
-14) publish all and then debug 
+1) Create a dashboard
+2) Create a resource and a resource group
+3) Create a Blob Storage account
+4) Create an ADLS Gen2 account and enable the Hierarchical Namespace
+5) For both storage accounts, go to Settings → Configurations and enable “Allow blob anonymous access.”
+6) In Blob Storage, create a container named retail-raw → upload products.csv
+(While debugging the pipeline, create a container in ADLS named retail-datasets → inside it, create a directory called raw).
+7) Create Azure Data Factory
+8) Create Linked Services for both Blob Storage and ADLS Gen2
+9) Create Datasets for both sources
+10) Build the Pipeline:
+a) Add the Validation activity first
+b) Add Get Metadata activity
+c) Use an If Condition activity to check and proceed to Copy Data (if true)
+11) Publish all changes and then Debug the pipeline
